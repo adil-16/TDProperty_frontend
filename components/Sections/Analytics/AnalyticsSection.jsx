@@ -1,0 +1,208 @@
+"use client";
+
+import SortSvg from "@/components/Svgs/SortSvg";
+import TablePagination from "@/components/Tables/TablePagination";
+import TableWithSort from "@/components/Tables/TableWithSort";
+import Image from "next/image";
+
+const AnalyticsSection = () => {
+  const headings = [
+    { id: 1, label: "Property", key: "property" },
+    { id: 2, label: "Impressions", key: "impressions" },
+    { id: 3, label: "Clicks", key: "clicks" },
+    { id: 4, label: "Time Spent (mins)", key: "timeSpentInMins" },
+    { id: 5, label: "Saved by user", key: "savedByUser" },
+    { id: 6, label: "Added to saved", key: "addedToSaved" },
+  ];
+  const data = [
+    {
+      id: 1,
+      property: "Property 1",
+      profilePic: "/imgs/profile.png",
+      impressions: "5",
+      clicks: "2",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 2,
+      property: "Property 2",
+      profilePic: "/imgs/profile.png",
+      impressions: "16",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 3,
+      property: "Property 3",
+      profilePic: "/imgs/profile.png",
+      impressions: "1",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 4,
+      property: "Property 4",
+      profilePic: "/imgs/profile.png",
+      impressions: "2",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 5,
+      property: "Property 5",
+      profilePic: "/imgs/profile.png",
+      impressions: "6",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 6,
+      property: "Property 6",
+      profilePic: "/imgs/profile.png",
+      impressions: "18",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 7,
+      property: "Property 7",
+      profilePic: "/imgs/profile.png",
+      impressions: "25",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 8,
+      property: "Property 8",
+      profilePic: "/imgs/profile.png",
+      impressions: "2",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 9,
+      property: "Property 9",
+      profilePic: "/imgs/profile.png",
+      impressions: "9",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 10,
+      property: "Property 10",
+      profilePic: "/imgs/profile.png",
+      impressions: "5",
+      clicks: "2",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 11,
+      property: "Property 11",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 12,
+      property: "Property 12",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 13,
+      property: "Property 13",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 14,
+      property: "Property 14",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 15,
+      property: "Property 15",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 16,
+      property: "Property 16",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 17,
+      property: "Property 17",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+    {
+      id: 18,
+      property: "Property 18",
+      profilePic: "/imgs/profile.png",
+      impressions: "10",
+      clicks: "10",
+      timeSpentInMins: "10",
+      savedByUser: "10",
+      addedToSaved: "10",
+    },
+  ];
+  return (
+    <div className="flex flex-col px-6 pb-10 pt-4 shadow-[0px_1.78114px_42.74738px_0px_rgba(0,0,0,0.06)]">
+      <h1 className="font-semibold text-secondary ">Analytics</h1>
+      {/* Table */}
+      <TableWithSort headings={headings} data={data} />
+    </div>
+  );
+};
+
+export default AnalyticsSection;
